@@ -20,7 +20,7 @@ for file in desktop.iterdir():
         # Update file count dictionary
         file_count[file_extension] = file_count.get(file_extension, 0) + 1
         
-        # Move screenshots to the screenshot folder
+        # Move screenshots to the screenshot folder spaghetti
         if "screenshot" in file.stem.lower():
             destination = screenshot_folder / file.name
             if destination.exists():  # Handle duplicate files by renaming
