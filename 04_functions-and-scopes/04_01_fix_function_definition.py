@@ -9,5 +9,7 @@
 # greeting = hello(name)
 # print(greeting)
 def say_hello(name):
-    return f"Hello {name}!"
-print(say_hello(name="John"))
+    hello = f"Hello {name}!"
+    return hello
+print(say_hello("Alice"))
+
