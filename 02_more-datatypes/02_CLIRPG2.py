@@ -149,7 +149,7 @@ while user_health > 0:
     elif door_choice == "right":
         print("You have entered a room with a dragon!")
         if input("Would you like to fight the dragon? yes / no: ").lower().strip() == "yes":
-            # Check if the player has the golden axe for the dragon fight
+            # Check if the player has the golden axe for the dragon fight tt
             if "golden axe" in inventory:
                 print("You bravely fight the dragon with your golden axe!")
                 

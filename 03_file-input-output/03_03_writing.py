@@ -1,5 +1,5 @@
 # Write a script that reads in the contents of `words.txt`
-# and writes the contents in reverse to a new file `words_reverse.txt`.
+# and writes the contents in reverse to a new file `words_reverse.txt`.a
 from pathlib import Path
 
 original_file = Path("/Users/davidiraheta/Documents/CodingNomads/Projects/python-201-main/03_file-input-output/words.txt")

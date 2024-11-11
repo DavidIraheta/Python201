@@ -23,7 +23,7 @@ for file in desktop.iterdir():
         # Move screenshots to the screenshot folder spaghetti
         if "screenshot" in file.stem.lower():
             destination = screenshot_folder / file.name
-            if destination.exists():  # Handle duplicate files by renaming
+            if destination.exists():  # Handle duplicate files by renaminga
                 destination = screenshot_folder / f"copy_of_{file.name}"
             file.rename(destination)
 

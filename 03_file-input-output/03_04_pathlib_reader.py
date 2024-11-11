@@ -13,7 +13,7 @@ screenshot_folder.mkdir(exist_ok=True)  # Create Screenshots folder if it doesn'
 
 # Loop through each file on the desktop
 for file in desktop.iterdir():
-    if file.is_file():  # Only process files, not directories
+    if file.is_file():  # Only process files, not directoriesa
         file_extension = file.suffix.lower()
         
         # Update file count dictionary

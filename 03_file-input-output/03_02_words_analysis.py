@@ -3,7 +3,7 @@
 
 # 1. The shortest word (if there is a tie, print all)
 # 2. The longest word (if there is a tie, print all)
-# 3. The total number of words in the file.
+# 3. The total number of words in the file.a
 with open ("/Users/davidiraheta/Documents/CodingNomads/Projects/python-201-main/03_file-input-output/words.txt", "r") as file:
     words = file.read().split()
     shortest = []
