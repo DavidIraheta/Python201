@@ -10,7 +10,7 @@ def realtor_ad(location, *args, **kwargs):
     for arg in args:
         print(f"- {arg}")
     for key, value in kwargs.items():
-        print(f"- {"New York"}: {"value"}")
+        print(f"- {key}: {value}")
     print("----------------------------------------------------")
 
 realtor_ad("New York", "3 bedrooms", "2 bathrooms", "1,500 sqft", "1,000,000 USD", "Great view", "Close to subway")
