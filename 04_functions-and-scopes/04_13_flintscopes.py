@@ -5,7 +5,7 @@
 # - print that variable
 
 def shout(name):
-    loud_name = name.upper()
+    return name.upper()
 
-shout("wilma")
+loud_name = shout("Wilma")
 print(loud_name)

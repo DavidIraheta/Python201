@@ -3,7 +3,12 @@
 # and what it returns.
 
 def km_to_miles(km):
-    """This function to taking the argument kilometeres and converting it to miles."""
+    """This function to taking the argument kilometeres and converting it to miles.
+    Args:
+        km: float or int
+        Returns:
+        miles: float or int"""
+
     miles = km * 0.6
     return miles
 

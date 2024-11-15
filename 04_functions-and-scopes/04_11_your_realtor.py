@@ -22,3 +22,5 @@ realtor_ad("Austin", "3 bedrooms", "2 bathrooms", "1,500 sqft", "800,000 USD", "
 realtor_ad("Denver", "2 bedrooms", "1 bathroom", "1,000 sqft", "700,000 USD", "Close to the lake")
 realtor_ad("Portland", "1 bedroom", "1 bathroom", "800 sqft", "600,000 USD", "Close to the park")
 print(realtor_ad)
+
+
