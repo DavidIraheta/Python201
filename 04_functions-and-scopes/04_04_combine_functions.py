@@ -7,7 +7,7 @@ def greet(greeting, name):
     return sentence
 
 def write_letter(name,text):
-    greeting = greet(f"Hello", {name})
+    greeting = greet("Hello", name)
     goodbye = f"Goodbye {name}"
     letter = f"{greeting}\n\n{text}\n\n{goodbye}"
     return letter

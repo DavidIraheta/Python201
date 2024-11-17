@@ -7,3 +7,24 @@
 # - call your functions, passing in the user input as the arguments,
 #   and set their output equal to new variables 
 # - print your the result variables with descriptive messages
+
+def four_or_seven(number):
+    if number % 4 == 0 or number % 7 == 0:
+        return True
+    else:
+        return False
+    
+def four_and_seven(number):
+    if number % 4 == 0 and number & 7 == 0:
+        return True
+    else: 
+        return False 
+    
+user_input = int(input("Enter a number betweeen 1 and 1,000,000,000: "))
+result_1 = four_or_seven(user_input)
+result_2 = four_and_seven(user_input)
+
+print(f"Is {user_input} divisible by 4 or 7? {result_1}")
+print(f"Is {user_input} divisble by 4 and 7? {result_2}")
+
+

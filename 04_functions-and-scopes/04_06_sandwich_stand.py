@@ -5,8 +5,8 @@
 #   and bottom, and the toppings in between.
 
 def make_sandwich(meat, bread, *toppings):
-    toppings_list = " ".join(toppings)
-    sandwich = f"{meat} sandwich with {toppings} and {"".join(bread)} on top and bottom."
+    toppings_list = ", ".join(toppings)
+    sandwich = f"{meat} sandwich with {toppings_list} and {bread} on top and bottom."
     return sandwich
 
 print(make_sandwich("Turkey","wheat bread","Swiss","Lettuce, Tomato","Mayo"))
