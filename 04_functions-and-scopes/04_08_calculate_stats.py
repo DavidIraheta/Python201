@@ -9,3 +9,15 @@ def stats():
   pass
 
 # call the function below here
+
+def stats(numbers):
+    maximum = max(numbers)
+    minimum = min(numbers)
+    average = sum(numbers) / len(numbers)
+    total = sum(numbers)
+    print(f"Maximum: {maximum}")
+    print(f"Minimum: {minimum}")
+    print(f"Average: {average}")
+    print(f"Total: {total}")
+
+stats(example_list)
