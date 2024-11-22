@@ -3,3 +3,4 @@
 .localized 
 .DS_Store
 .venv
+venv/
