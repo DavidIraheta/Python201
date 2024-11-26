@@ -10,3 +10,5 @@
 
 s = {1, 2, 3, 4}
 t = {2, 3, 4, 5, 7}
+set_comp = {i**2 for i in s | t if i > 2 }
+print(set_comp)

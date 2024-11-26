@@ -4,6 +4,10 @@
 # already defined in the `codingnomads/` folder.
 
 
+from codingnomads.soup import make_soup
+from codingnomads.ingredients import carrot
 
-soup = make_soup(potato)
+soup = make_soup("potato")
 print(soup)
+print(carrot)
+

@@ -16,30 +16,25 @@ from resources import randlist
 
 print(randlist)
 
-# Write your code below here
-# r = randlist
-# r.sort()
-# sorted_list = []
-# for i in range(0, len(r), 2):
-#     if i == len(r) - 1:
-#         print((r[i], 0))
-#     else:
-#      sorted_list.append((r[i], r[i+1]))
-# for i in sorted_list:
-#     print(i)
 r = randlist
 r.sort()
-if len(r) % 2 != 0:
-    r.append(0)
-r = [(r[i], r[i+1]) for i in range(0, len(r), 2)]
-for i in r:
+sorted_list = []
+for i in range(0, len(r), 2):
+    if i == len(r) - 1:
+        print((r[i], 0))
+    else:
+     sorted_list.append((r[i], r[i+1]))
+for i in sorted_list:
     print(i)
+# r = randlist
+# r.sort()
+# if len(r) % 2 != 0:
+#     r.append(0)
+# r = [(r[i], r[i+1]) for i in range(0, len(r), 2)]
+# for i in r:
+#     print(i)
     
 
 
 
 
-
-# r = [(r[i], r[i+1]) for i in range(0, len(r), 2)]
-# for i in r:
-#     print(r)

@@ -11,8 +11,8 @@
 
 starter_list = [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
 flat_list = []
-for x in starter_list:
-    for y in x:
-        flat_list.append(y)
+for num in starter_list:
+    for nums in num:
+        flat_list.append(nums)
 print(flat_list)
 # flat_list = [item for y in starter_list for item in x]

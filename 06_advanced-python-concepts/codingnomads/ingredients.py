@@ -10,3 +10,5 @@ potato = "potato"
 
 if __name__ == "__main__":
     print(prepare(potato))
+import os
+print(os.getcwd())
