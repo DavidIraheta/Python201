@@ -12,4 +12,8 @@
 # {0: [0, 0, 0], 1: [0, 0, 1], 2: [0, 1, 0], 3: [0, 1, 1], ...,
 # 7: [1, 1, 1], 8: [1, 0, 0, 0], 9: [1, 0, 0, 1], ...,
 # 999: [1, 1, 1, 1, 1, 0, 0, 1, 1, 1]}
-dict_comp = 
+# dict_comp1 = {i: [int(j) for j in str(i)] for i in range(1000)}
+# print(dict_comp1)
+dict_comp2 = {i: [int(j) for j in f"{i:0>10b}"] for i in range(1000)}
+print(dict_comp2)
+
