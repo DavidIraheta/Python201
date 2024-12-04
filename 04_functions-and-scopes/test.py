@@ -27,4 +27,7 @@
 
 # print_name_box()
 
-print('Example 1.1:', chr(int('01100011',2)))
+# print('Example 1.1:', chr(int('01100011',2)))
+import sqlalchemy  
+
+engine = sqlalchemy.create_engine('postgresql://username:password@localhost/mydatabase')
