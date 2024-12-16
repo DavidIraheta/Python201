@@ -8,4 +8,16 @@
 # sorted_list = sorted(unsorted_list, key=lambda x: x[1])
 # print(sorted_list)
 
+# a = 0 
+# b = 42 
+# breakpoint()
+# a += b
+# breakpoint()
+
+my_list = [ 1, 22, 7, 9, 18]
+
+new_list = []
+for i in my_list:
+    i = i + 1
+    breakpoint()
 

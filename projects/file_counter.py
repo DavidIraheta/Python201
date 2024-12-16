@@ -8,6 +8,15 @@
 # In this project, you'll continue to work with pathlib and files, 
 # but you'll also use some of the additional built-in data types that you got to know in this section.
 from pathlib import Path
+import sqlalchemy  
+import datetime
+  
+engine = sqlalchemy.create_engine('mysql+pymysql://root:September.834@localhost/file_counter')
+
+connection = engine.connect()  
+metadata = sqlalchemy.MetaData()  
+
+file_counter = sqlalchemy.Table('File_Counter', metadata, autoload_with=engine)  
 
 # Dictionary to count file types
 file_count = {}
@@ -17,24 +26,28 @@ desktop = Path.home() / "Desktop"
 screenshot_folder = desktop / "untitled folder"
 screenshot_folder.mkdir(exist_ok=True)  # Create Screenshots folder if it doesn't exist
 
+current_date = datetime.datetime.now()
+
 # Loop through each file on the desktop
 for file in desktop.iterdir():
     if file.is_file():  # Only process files, not directories
         file_extension = file.suffix.lower()
         
         # Update file count dictionary
-        file_count[file_extension] = file_count.get(file_extension, 0) + 1
         
+        query = sqlalchemy.insert(file_counter).values(File_name=file.stem, File_extension=file_extension, Date_time_of_file=current_date)  
+        result_proxy = connection.execute(query)  
+        connection.commit()
         # Move screenshots to the screenshot folder
-        if "screenshot" in file.stem.lower():
-            destination = screenshot_folder / file.name
-            if destination.exists():  # Handle duplicate files by renaming
-                destination = screenshot_folder / f"copy_of_{file.name}"
-            file.rename(destination)
+        # if "screenshot" in file.stem.lower():
+        #     destination = screenshot_folder / file.name
+        #     if destination.exists():  # Handle duplicate files by renaming
+        #         destination = screenshot_folder / f"copy_of_{file.name}"
+        #     file.rename(destination)
 
-# Print the count of each file type
-for ext, count in file_count.items():
-    print(f"There are {count} file(s) with the '{ext}' extension on your desktop.")
+# # Print the count of each file type
+# for ext, count in file_count.items():
+#     print(f"There are {count} file(s) with the '{ext}' extension on your desktop.")
 
 # count = {'': 2, '.pdf': 2}
 # file_out = open("file_count.txt", "w")
@@ -50,14 +63,14 @@ for ext, count in file_count.items():
 # print(contents)
 # file_in.close()
 # with open("filecounts.txt", "r") as file_in:
-#     print(file_in.read())
-import csv
-# -- snip --
-count = {"": 8, ".csv": 2, ".md": 2, ".png": 11}
+# #     print(file_in.read())
+# import csv
+# # -- snip --
+# count = {"": 8, ".csv": 2, ".md": 2, ".png": 11}
 
-with open("filecounts.csv", "a") as csvfile:
-    countwriter = csv.writer(csvfile)
-    data = [count[""], count[".csv"], count[".md"], count[".png"]]
-    countwriter.writerow(data)
+# with open("filecounts.csv", "a") as csvfile:
+#     countwriter = csv.writer(csvfile)
+#     data = [count[""], count[".csv"], count[".md"], count[".png"]]
+#     countwriter.writerow(data)
 
 
