@@ -3,19 +3,13 @@
 # What happens if you try to iterate over your tuple of characters?
 # Do you notice any difference to iterating over the string?
 
-import os
-
-cwd = os.getcwd()
-print(cwd)
-
-
-# string = "codingnomads"
-# tup = tuple(string)
-# print(tup)
-# for x in tup:
-#     print(x)
-# for x in string:
-#     print(x)
+string = "codingnomads"
+tup = tuple(string)
+print(tup)
+for x in tup:
+    print(x)
+for x in string:
+    print(x)
 
 # string = "codingnomads"
 

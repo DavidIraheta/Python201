@@ -23,6 +23,9 @@ office = [
 ]
 
 
+
+
+
 office_favorites = []
 for person in office:
     name = person["full_name"].split()
@@ -33,15 +36,7 @@ for person in office:
     office_favorites.append(f'{new_name:<20} {person["item"]}')
 for item in office_favorites:
     print(item)
-# office_favorites = []
-# for person in office:
-#     name = person["full_name"].split()
-#     last_name = name[1]
-#     first_name = name[0]
-#     item = person["item"]
-#     office_favorites.append((last_name, first_name, item, len(last_name)))
-    
-#     print(f"[{last_name}, {first_name:<20}] {item}")
+
 
 
 
